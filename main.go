@@ -100,5 +100,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/proxy", handler)
 	fmt.Println("🚀 Proxy server started on http://localhost:8080")
-	http.ListenAndServe(":8080", nil)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" 
+	}
+	http.ListenAndServe(":"+port, nil)
+
 }
