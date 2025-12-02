@@ -22,12 +22,8 @@ All requests and responses are stored locally in memory using `sync.Map`.
 
 ## 🧩 Request Format
 
-```json
-{
-  "method": "GET",
-  "url": "http://google.com",
-  "headers": {
-    "User-Agent": "GoProxyClient"
-  }
-}
+curl -X POST http://localhost:8080/proxy \ -H "Content-Type: application/json" \ -d '{ "method": "GET", "url": "https://google.com", "headers": {} }'
+
+```
+
 ```
