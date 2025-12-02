@@ -22,8 +22,12 @@ All requests and responses are stored locally in memory using `sync.Map`.
 
 ## 🧩 Request Format
 
-curl -X POST http://localhost:8080/proxy \ -H "Content-Type: application/json" \ -d '{ "method": "GET", "url": "https://google.com", "headers": {} }'
-
 ```
-
+curl -X POST http://localhost:8080/proxy \
+-H "Content-Type: application/json" \
+-d '{
+  "method": "GET",
+  "url": "https://google.com",
+  "headers": {}
+  }'
 ```
